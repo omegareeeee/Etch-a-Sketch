@@ -1,8 +1,20 @@
 body{
+    flex-direction: column;
     background-color: orange;
 }
 h1{
     display: flex;
     justify-content: center;
     color: white;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    margin: 5px;
 }
