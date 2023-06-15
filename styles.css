@@ -15,18 +15,15 @@ h1{
 }
 .container{
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
+    width: 960px;
 }
 
 .box{
-    height: 25px;
-    width: 25px;
     background-color: black;
     margin: 5px;
 }
 
 button{
     width: 50px;
-    display: flex;
 }
