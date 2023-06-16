@@ -30,7 +30,13 @@ function createGrid(size){
 
 const body = document.querySelector('body');
 
-let size = prompt("size?");
+let size = -10;
+// figure out this
+
+while (!(size > 0 && size <= 100 )){
+    size = prompt("Size of Grid? (must be 1 - 100)");
+}
+
 
 const resetButton = document.createElement('button');
 resetButton.textContent = "Reset";
