@@ -5,6 +5,11 @@ function resetColor(){
     });
 }
 
+function removeAllBoxes(){
+    const boxes = document.querySelector(".container");
+    boxes.remove();
+}
+
 function createGrid(size){
     const divContainer = document.createElement('div');
     divContainer.classList.add('container');
@@ -31,16 +36,31 @@ function createGrid(size){
 const body = document.querySelector('body');
 
 let size = -10;
-// figure out this
-
 while (!(size > 0 && size <= 100 )){
     size = prompt("Size of Grid? (must be 1 - 100)");
 }
 
+const buttons = document.createElement('div');
+buttons.classList.add("buttons");
 
 const resetButton = document.createElement('button');
 resetButton.textContent = "Reset";
 resetButton.addEventListener('click', resetColor);
-body.appendChild(resetButton);
+buttons.appendChild(resetButton);
+
+const changeSizeButton = document.createElement('button');
+changeSizeButton.textContent = "Change Size";
+changeSizeButton.addEventListener('click', () => {
+    removeAllBoxes();
+    let size = -10;
+    while (!(size > 0 && size <= 100 )){
+        size = prompt("Size of Grid? (must be 1 - 100)");
+    }
+    body.appendChild(createGrid(size));
+});
+buttons.appendChild(changeSizeButton);
+
+body.appendChild(buttons);
+
 
 body.appendChild(createGrid(size));
