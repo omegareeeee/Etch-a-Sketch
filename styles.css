@@ -16,14 +16,20 @@ h1{
 .container{
     display: flex;
     justify-content: center;
-    width: 960px;
+    align-items: center;
+    width: 500px;
+    height: 500px;
 }
-
+.row{
+    display: flex;
+    flex-direction: column;
+}
 .box{
     background-color: black;
-    margin: 5px;
 }
 
 button{
     width: 50px;
+    margin-bottom: 10px;
+    border: none;
 }
