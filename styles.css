@@ -28,8 +28,11 @@ h1{
     background-color: black;
 }
 
-button{
-    width: 50px;
+.buttons{
+    display: flex;
     margin-bottom: 10px;
     border: none;
+}
+button{
+    margin-left: 5px;
 }
